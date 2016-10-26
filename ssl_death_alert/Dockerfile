@@ -1,4 +1,4 @@
-# Use apling linux
+# Use apline linux
 FROM alpine:3.1
 
 # install openssl nginx
