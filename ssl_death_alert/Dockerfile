@@ -13,12 +13,11 @@ RUN mkdir /etc/nginx/certificates && \
 	   -out /etc/nginx/certificates/cert.pem \
 	   -days 365 \
 	   -nodes \
-	   -subj /CN=localhost
+	   -subj /CN=localhost && \
+	   mkdir -p /tmp/nginx/client-body
 
 # configure nginx
 COPY nginx.conf /etc/nginx/nginx.conf
-
-RUN mkdir -p /tmp/nginx/client-body
 
 EXPOSE 80 443
 
